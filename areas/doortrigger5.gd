@@ -11,7 +11,7 @@ func _on_doortrigger5_body_entered(body):
 		set_process(true)
 		player = body
 		#get_tree().change_scene("res://areas/inside1.tscn")
-		SceneManager.goto_scene("res://areas/inscri.tscn")
+		SceneManager.goto_scene("res://areas/victoire.tscn")
 
 func _on_doortrigger5_body_exited(body):
 	if body.name == "player":
