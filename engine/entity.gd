@@ -69,7 +69,8 @@ func damage_loop(): #définir animation de dommage
 				instance_scene(preload("res://pickups/heart.tscn"))
 			instance_scene(preload("res://ennemies/enemy_death.tscn"))
 			queue_free()
-
+		if TYPE == "PLAYER" and health <=0:
+			SceneManager.goto_scene("res://Game_over/Game_over.tscn")
 	
 	for area in $hitbox.get_overlapping_areas(): #pour les contacts de hitbox
 		var body = area.get_parent()
