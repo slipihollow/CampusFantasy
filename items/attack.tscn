@@ -571,7 +571,7 @@ tracks/5/keys = {
 
 [sub_resource type="Animation" id=10]
 resource_name = "sword2down"
-length = 1.5
+length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("sprite:z_index")
 tracks/0/interp = 1
@@ -591,7 +591,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1, 1.5 ),
+"times": PoolRealArray( 0, 1, 2.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 6.90462, 24.3056 ), Vector2( -3.16067, 29.6193 ), Vector2( -3.16067, 29.6193 ) ]
@@ -603,7 +603,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 1, 1.5 ),
+"times": PoolRealArray( 0, 1, 2.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 150.0, 180.0, 180.0 ]
@@ -627,7 +627,7 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 1, 1.5 ),
+"times": PoolRealArray( 0, 1, 2.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 150.0, 180.0, 180.0 ]
@@ -639,7 +639,7 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 1, 1.5 ),
+"times": PoolRealArray( 0, 1, 2.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 3.94172, 20.1852 ), Vector2( -3.70873, 24.5679 ), Vector2( -3.70873, 24.5679 ) ]
@@ -656,10 +656,34 @@ tracks/6/keys = {
 "update": 0,
 "values": [ 8.0 ]
 }
+tracks/7/type = "value"
+tracks/7/path = NodePath("area/hitbox:disabled")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("sprite:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
 
 [sub_resource type="Animation" id=11]
 resource_name = "sword2left"
-length = 1.5
+length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("sprite:position")
 tracks/0/interp = 1
@@ -667,7 +691,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 1.5 ),
+"times": PoolRealArray( 0, 1, 2.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( -26.7755, -5.89367 ), Vector2( -32.7508, 2.50188 ), Vector2( -32.7508, 2.50188 ) ]
@@ -679,7 +703,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1, 1.5 ),
+"times": PoolRealArray( 0, 1, 2.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 300.0, 270.0, 270.0 ]
@@ -703,7 +727,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 1, 1.5 ),
+"times": PoolRealArray( 0, 1, 2.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 300.0, 270.0, 270.0 ]
@@ -727,7 +751,7 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 1, 1.5 ),
+"times": PoolRealArray( 0, 1, 2.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( -22.1411, -3.8172 ), Vector2( -27.7328, 2.01975 ), Vector2( -27.7328, 2.01975 ) ]
@@ -744,10 +768,34 @@ tracks/6/keys = {
 "update": 0,
 "values": [ 8.0 ]
 }
+tracks/7/type = "value"
+tracks/7/path = NodePath("area/hitbox:disabled")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("sprite:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
 
 [sub_resource type="Animation" id=12]
 resource_name = "sword2right"
-length = 1.5
+length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("sprite:position")
 tracks/0/interp = 1
@@ -755,7 +803,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 1.5 ),
+"times": PoolRealArray( 0, 1, 2.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 24.7188, -7.40899 ), Vector2( 31.2593, 3.77689 ), Vector2( 31.2593, 3.77689 ) ]
@@ -767,7 +815,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1, 1.5 ),
+"times": PoolRealArray( 0, 1, 2.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 60.0, 90.0, 90.0 ]
@@ -791,7 +839,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 1, 1.5 ),
+"times": PoolRealArray( 0, 1, 2.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 60.0, 90.0, 90.0 ]
@@ -815,7 +863,7 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 1, 1.5 ),
+"times": PoolRealArray( 0, 1, 2.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 20.5982, -4.45052 ), Vector2( 26.2188, 4.29141 ), Vector2( 26.2188, 4.29141 ) ]
@@ -832,10 +880,34 @@ tracks/6/keys = {
 "update": 0,
 "values": [ 8.0 ]
 }
+tracks/7/type = "value"
+tracks/7/path = NodePath("sprite:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("area/hitbox:disabled")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
 
 [sub_resource type="Animation" id=13]
 resource_name = "sword2up"
-length = 1.5
+length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("sprite:position")
 tracks/0/interp = 1
@@ -843,7 +915,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 1.5 ),
+"times": PoolRealArray( 0, 1, 2.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( -7.01908, -27.1333 ), Vector2( 5.03772, -37.4348 ), Vector2( 5.03772, -37.4348 ) ]
@@ -867,7 +939,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 1, 1.5 ),
+"times": PoolRealArray( 0, 1, 2.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ -30.0, 0.0, 0.0 ]
@@ -879,7 +951,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 1, 1.5 ),
+"times": PoolRealArray( 0, 1, 2.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ -30.0, 0.0, 0.0 ]
@@ -903,7 +975,7 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 1, 1.5 ),
+"times": PoolRealArray( 0, 1, 2.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( -4.0652, -23.009 ), Vector2( 5.52916, -32.3463 ), Vector2( 5.52916, -32.3463 ) ]
@@ -919,6 +991,30 @@ tracks/6/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 8.0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("area/hitbox:disabled")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("sprite:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
 }
 
 [sub_resource type="Animation" id=14]
@@ -1296,11 +1392,10 @@ anims/swordright = SubResource( 16 )
 anims/swordup = SubResource( 17 )
 
 [node name="sprite" type="Sprite" parent="."]
-position = Vector2( 6.90462, 24.3056 )
-rotation = 2.61799
+position = Vector2( 5.03772, -37.4348 )
+z_index = -1
 texture = ExtResource( 2 )
 vframes = 2
-frame = 1
 
 [node name="area" type="Area2D" parent="."]
 __meta__ = {
@@ -1308,6 +1403,5 @@ __meta__ = {
 }
 
 [node name="hitbox" type="CollisionShape2D" parent="area"]
-position = Vector2( 3.94172, 20.1852 )
-rotation = 2.61799
+position = Vector2( 5.52916, -32.3463 )
 shape = SubResource( 2 )
