@@ -94,10 +94,9 @@ rotation = 5.02655
 texture = ExtResource( 6 )
 vframes = 4
 
-[node name="hitbox2" type="Area2D" parent="."]
-monitoring = false
+[node name="spells" type="Area2D" parent="."]
 
-[node name="magicball" type="CollisionShape2D" parent="hitbox2"]
+[node name="magicball" type="CollisionShape2D" parent="spells"]
 position = Vector2( -64, 0 )
 scale = Vector2( 0.2, 0.2 )
 shape = SubResource( 5 )

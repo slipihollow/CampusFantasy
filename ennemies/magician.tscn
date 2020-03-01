@@ -154,7 +154,7 @@ tracks/11/keys = {
 "values": [ Vector2( -9.39865, 5.94114 ) ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("hitbox:monitoring")
+tracks/12/path = NodePath("shape:disabled")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
@@ -163,10 +163,10 @@ tracks/12/keys = {
 "times": PoolRealArray( 0, 1.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ true, false ]
+"values": [ false, true ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("hitbox:monitorable")
+tracks/13/path = NodePath("hitbox/CollisionShape2D:disabled")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -175,10 +175,10 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 1.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ true, false ]
+"values": [ false, true ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("shape:disabled")
+tracks/14/path = NodePath("hitbox/CollisionShape2D2:disabled")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
@@ -190,36 +190,12 @@ tracks/14/keys = {
 "values": [ false, true ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("hitbox/CollisionShape2D:disabled")
+tracks/15/path = NodePath("hitbox/CollisionShape2D3:disabled")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
 tracks/15/enabled = true
 tracks/15/keys = {
-"times": PoolRealArray( 0, 1.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-tracks/16/type = "value"
-tracks/16/path = NodePath("hitbox/CollisionShape2D2:disabled")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/keys = {
-"times": PoolRealArray( 0, 1.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-tracks/17/type = "value"
-tracks/17/path = NodePath("hitbox/CollisionShape2D3:disabled")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/keys = {
 "times": PoolRealArray( 0, 1.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
@@ -375,7 +351,7 @@ tracks/11/keys = {
 "values": [ Vector2( 8.37913, 5.57333 ) ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("hitbox:monitoring")
+tracks/12/path = NodePath("shape:disabled")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
@@ -384,10 +360,10 @@ tracks/12/keys = {
 "times": PoolRealArray( 0, 1.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ true, false ]
+"values": [ false, true ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("hitbox:monitorable")
+tracks/13/path = NodePath("hitbox/CollisionShape2D:disabled")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -396,10 +372,10 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 1.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ true, false ]
+"values": [ false, true ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("shape:disabled")
+tracks/14/path = NodePath("hitbox/CollisionShape2D2:disabled")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
@@ -411,36 +387,12 @@ tracks/14/keys = {
 "values": [ false, true ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("hitbox/CollisionShape2D:disabled")
+tracks/15/path = NodePath("hitbox/CollisionShape2D3:disabled")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
 tracks/15/enabled = true
 tracks/15/keys = {
-"times": PoolRealArray( 0, 1.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-tracks/16/type = "value"
-tracks/16/path = NodePath("hitbox/CollisionShape2D2:disabled")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/keys = {
-"times": PoolRealArray( 0, 1.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-tracks/17/type = "value"
-tracks/17/path = NodePath("hitbox/CollisionShape2D3:disabled")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/keys = {
 "times": PoolRealArray( 0, 1.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
@@ -471,6 +423,7 @@ min_move_distance = 250
 knock = 5
 
 [node name="sprite" type="Sprite" parent="."]
+visible = false
 scale = Vector2( 1, 1.18059 )
 texture = ExtResource( 2 )
 vframes = 5
@@ -485,6 +438,7 @@ anims/magicianR = SubResource( 2 )
 visible = false
 position = Vector2( 7.89898, 13.2491 )
 shape = SubResource( 3 )
+disabled = true
 __meta__ = {
 "_edit_lock_": true
 }
@@ -510,14 +464,17 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
 position = Vector2( 8.06322, 16.273 )
 shape = SubResource( 5 )
+disabled = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="hitbox"]
 position = Vector2( 9.23605, 1.31944 )
 shape = SubResource( 6 )
+disabled = true
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="hitbox"]
 position = Vector2( 20.0847, -2.19906 )
 shape = SubResource( 7 )
+disabled = true
 
 [node name="audioeffect" type="Node" parent="."]
 
@@ -525,10 +482,9 @@ shape = SubResource( 7 )
 stream = ExtResource( 3 )
 
 [node name="sprite2" type="Sprite" parent="."]
-visible = false
 position = Vector2( 8.37913, 5.57333 )
-rotation = 1.46901
 texture = ExtResource( 4 )
 flip_h = true
 vframes = 4
-frame = 3
+
+[node name="spells" type="Area2D" parent="."]

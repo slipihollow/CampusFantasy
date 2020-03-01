@@ -2,9 +2,9 @@
 
 [ext_resource path="res://ennemies/lucifer.gd" type="Script" id=1]
 [ext_resource path="res://ennemies/creatures/morerpgenemies.png" type="Texture" id=2]
-[ext_resource path="res://sounds/monster/paine.wav" type="AudioStream" id=3]
-[ext_resource path="res://ennemies/creatures/firemagic+.tres" type="Animation" id=4]
-[ext_resource path="res://ennemies/creatures/firemagicD+.tres" type="Animation" id=5]
+[ext_resource path="res://ennemies/creatures/firemagicD+Lucifer.tres" type="Animation" id=3]
+[ext_resource path="res://sounds/monster/paine.wav" type="AudioStream" id=4]
+[ext_resource path="res://ennemies/creatures/firemagic+.tres" type="Animation" id=5]
 [ext_resource path="res://ennemies/creatures/firespell.png" type="Texture" id=6]
 
 [sub_resource type="Animation" id=1]
@@ -165,7 +165,7 @@ tracks/12/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -20.8246, -1.43051e-006 ) ]
+"values": [ Vector2( -20.8246, -1.43051e-06 ) ]
 }
 tracks/13/type = "value"
 tracks/13/path = NodePath("spell/spell1:position")
@@ -216,7 +216,7 @@ tracks/16/keys = {
 "values": [ Vector2( 0, 50 ), Vector2( 0, 250 ), Vector2( 0, 0 ) ]
 }
 tracks/17/type = "value"
-tracks/17/path = NodePath("hitbox3/spell5:position")
+tracks/17/path = NodePath("spells/spell5:position")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/imported = false
@@ -228,7 +228,7 @@ tracks/17/keys = {
 "values": [ Vector2( -47.9752, 1.1524 ), Vector2( -238.756, 1.53609 ), Vector2( -251.323, 0.712051 ), Vector2( -140.277, -0.0641922 ), Vector2( 0, 0 ) ]
 }
 tracks/18/type = "value"
-tracks/18/path = NodePath("hitbox3/spell6:position")
+tracks/18/path = NodePath("spells/spell6:position")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/imported = false
@@ -240,7 +240,7 @@ tracks/18/keys = {
 "values": [ Vector2( 46.2797, 0.530029 ), Vector2( 238.993, 1.80144 ), Vector2( 249.976, 0 ), Vector2( 142.957, -0.333617 ), Vector2( 0, 0 ) ]
 }
 tracks/19/type = "value"
-tracks/19/path = NodePath("hitbox3/spell8:position")
+tracks/19/path = NodePath("spells/spell8:position")
 tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/imported = false
@@ -252,7 +252,7 @@ tracks/19/keys = {
 "values": [ Vector2( 0.975647, 48.411 ), Vector2( 0.0661818, 236.982 ), Vector2( -0.569389, 253.077 ), Vector2( -0.200043, 143.491 ), Vector2( 0, 0 ) ]
 }
 tracks/20/type = "value"
-tracks/20/path = NodePath("hitbox3/spell7:position")
+tracks/20/path = NodePath("spells/spell7:position")
 tracks/20/interp = 1
 tracks/20/loop_wrap = true
 tracks/20/imported = false
@@ -408,7 +408,7 @@ tracks/32/keys = {
 "values": [ 1, 2, 3, 4, 5, 6, 0, 1, 2, 3, 4, 5, 6, 0, 1, 2, 3, 4, 5, 6, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
 }
 tracks/33/type = "value"
-tracks/33/path = NodePath("hitbox3/spell6:rotation_degrees")
+tracks/33/path = NodePath("spells/spell6:rotation_degrees")
 tracks/33/interp = 1
 tracks/33/loop_wrap = true
 tracks/33/imported = false
@@ -420,7 +420,7 @@ tracks/33/keys = {
 "values": [ 0.0 ]
 }
 tracks/34/type = "value"
-tracks/34/path = NodePath("hitbox3/spell5:rotation_degrees")
+tracks/34/path = NodePath("spells/spell5:rotation_degrees")
 tracks/34/interp = 1
 tracks/34/loop_wrap = true
 tracks/34/imported = false
@@ -432,7 +432,7 @@ tracks/34/keys = {
 "values": [ 0.0 ]
 }
 tracks/35/type = "value"
-tracks/35/path = NodePath("hitbox3/spell7:rotation_degrees")
+tracks/35/path = NodePath("spells/spell7:rotation_degrees")
 tracks/35/interp = 1
 tracks/35/loop_wrap = true
 tracks/35/imported = false
@@ -444,7 +444,7 @@ tracks/35/keys = {
 "values": [ 90.0 ]
 }
 tracks/36/type = "value"
-tracks/36/path = NodePath("hitbox3/spell8:rotation_degrees")
+tracks/36/path = NodePath("spells/spell8:rotation_degrees")
 tracks/36/interp = 1
 tracks/36/loop_wrap = true
 tracks/36/imported = false
@@ -456,7 +456,7 @@ tracks/36/keys = {
 "values": [ 90.0 ]
 }
 tracks/37/type = "value"
-tracks/37/path = NodePath("hitbox3/spell8:scale")
+tracks/37/path = NodePath("spells/spell8:scale")
 tracks/37/interp = 1
 tracks/37/loop_wrap = true
 tracks/37/imported = false
@@ -468,7 +468,7 @@ tracks/37/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 0.1, 0.1 ) ]
 }
 tracks/38/type = "value"
-tracks/38/path = NodePath("hitbox3/spell7:scale")
+tracks/38/path = NodePath("spells/spell7:scale")
 tracks/38/interp = 1
 tracks/38/loop_wrap = true
 tracks/38/imported = false
@@ -480,7 +480,7 @@ tracks/38/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 0.1, 0.1 ) ]
 }
 tracks/39/type = "value"
-tracks/39/path = NodePath("hitbox3/spell6:scale")
+tracks/39/path = NodePath("spells/spell6:scale")
 tracks/39/interp = 1
 tracks/39/loop_wrap = true
 tracks/39/imported = false
@@ -492,7 +492,7 @@ tracks/39/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 0.1, 0.1 ) ]
 }
 tracks/40/type = "value"
-tracks/40/path = NodePath("hitbox3/spell5:scale")
+tracks/40/path = NodePath("spells/spell5:scale")
 tracks/40/interp = 1
 tracks/40/loop_wrap = true
 tracks/40/imported = false
@@ -504,64 +504,280 @@ tracks/40/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 0.1, 0.1 ) ]
 }
 tracks/41/type = "value"
-tracks/41/path = NodePath("hitbox3/spell5:disabled")
+tracks/41/path = NodePath("spells/spell5:disabled")
 tracks/41/interp = 1
 tracks/41/loop_wrap = true
 tracks/41/imported = false
 tracks/41/enabled = true
 tracks/41/keys = {
-"times": PoolRealArray( 0, 2, 5.5 ),
+"times": PoolRealArray( 2, 5, 5.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ true, false, true ]
+"values": [ false, true, true ]
 }
 tracks/42/type = "value"
-tracks/42/path = NodePath("hitbox3/spell6:disabled")
+tracks/42/path = NodePath("spells/spell6:disabled")
 tracks/42/interp = 1
 tracks/42/loop_wrap = true
 tracks/42/imported = false
 tracks/42/enabled = true
 tracks/42/keys = {
-"times": PoolRealArray( 0, 2, 5.5 ),
+"times": PoolRealArray( 2, 5, 5.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ true, false, true ]
+"values": [ false, true, true ]
 }
 tracks/43/type = "value"
-tracks/43/path = NodePath("hitbox3/spell7:disabled")
+tracks/43/path = NodePath("spells/spell7:disabled")
 tracks/43/interp = 1
 tracks/43/loop_wrap = true
 tracks/43/imported = false
 tracks/43/enabled = true
 tracks/43/keys = {
-"times": PoolRealArray( 0, 2, 5.5 ),
+"times": PoolRealArray( 2, 5, 5.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ true, false, true ]
+"values": [ false, true, true ]
 }
 tracks/44/type = "value"
-tracks/44/path = NodePath("hitbox3/spell8:disabled")
+tracks/44/path = NodePath("spells/spell8:disabled")
 tracks/44/interp = 1
 tracks/44/loop_wrap = true
 tracks/44/imported = false
 tracks/44/enabled = true
 tracks/44/keys = {
-"times": PoolRealArray( 0, 2, 5.5 ),
+"times": PoolRealArray( 2, 5, 5.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ true, false, true ]
+"values": [ false, true, true ]
 }
 tracks/45/type = "value"
-tracks/45/path = NodePath("hitbox3:monitorable")
+tracks/45/path = NodePath("spellsD/spellD6:rotation_degrees")
 tracks/45/interp = 1
 tracks/45/loop_wrap = true
 tracks/45/imported = false
 tracks/45/enabled = true
 tracks/45/keys = {
-"times": PoolRealArray( 0, 2 ),
+"times": PoolRealArray( 0, 4 ),
 "transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 135.0, 135.0 ]
+}
+tracks/46/type = "value"
+tracks/46/path = NodePath("spellsD/spellD5:rotation_degrees")
+tracks/46/interp = 1
+tracks/46/loop_wrap = true
+tracks/46/imported = false
+tracks/46/enabled = true
+tracks/46/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 45.0, 45.0 ]
+}
+tracks/47/type = "value"
+tracks/47/path = NodePath("spellsD/spellD7:rotation_degrees")
+tracks/47/interp = 1
+tracks/47/loop_wrap = true
+tracks/47/imported = false
+tracks/47/enabled = true
+tracks/47/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 45.0, 45.0 ]
+}
+tracks/48/type = "value"
+tracks/48/path = NodePath("spellsD/spellD8:rotation_degrees")
+tracks/48/interp = 1
+tracks/48/loop_wrap = true
+tracks/48/imported = false
+tracks/48/enabled = true
+tracks/48/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -44.9998, -44.9998 ]
+}
+tracks/49/type = "value"
+tracks/49/path = NodePath("spellD/spellD1:rotation_degrees")
+tracks/49/interp = 1
+tracks/49/loop_wrap = true
+tracks/49/imported = false
+tracks/49/enabled = true
+tracks/49/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -44.9999, -44.9999 ]
+}
+tracks/50/type = "value"
+tracks/50/path = NodePath("spellD/spellD2:rotation_degrees")
+tracks/50/interp = 1
+tracks/50/loop_wrap = true
+tracks/50/imported = false
+tracks/50/enabled = true
+tracks/50/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 45.0, 45.0 ]
+}
+tracks/51/type = "value"
+tracks/51/path = NodePath("spellD/spellD3:rotation_degrees")
+tracks/51/interp = 1
+tracks/51/loop_wrap = true
+tracks/51/imported = false
+tracks/51/enabled = true
+tracks/51/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 135.0, 135.0 ]
+}
+tracks/52/type = "value"
+tracks/52/path = NodePath("spellD/spellD4:rotation_degrees")
+tracks/52/interp = 1
+tracks/52/loop_wrap = true
+tracks/52/imported = false
+tracks/52/enabled = true
+tracks/52/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -135.0, -135.0 ]
+}
+tracks/53/type = "value"
+tracks/53/path = NodePath("spellD/spellD1:visible")
+tracks/53/interp = 1
+tracks/53/loop_wrap = true
+tracks/53/imported = false
+tracks/53/enabled = true
+tracks/53/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ false, true ]
+"values": [ true, false, true ]
+}
+tracks/54/type = "value"
+tracks/54/path = NodePath("spellD/spellD2:visible")
+tracks/54/interp = 1
+tracks/54/loop_wrap = true
+tracks/54/imported = false
+tracks/54/enabled = true
+tracks/54/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/55/type = "value"
+tracks/55/path = NodePath("spellD/spellD3:visible")
+tracks/55/interp = 1
+tracks/55/loop_wrap = true
+tracks/55/imported = false
+tracks/55/enabled = true
+tracks/55/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/56/type = "value"
+tracks/56/path = NodePath("spellD/spellD4:visible")
+tracks/56/interp = 1
+tracks/56/loop_wrap = true
+tracks/56/imported = false
+tracks/56/enabled = true
+tracks/56/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/57/type = "value"
+tracks/57/path = NodePath("spellsD/spellD5:disabled")
+tracks/57/interp = 1
+tracks/57/loop_wrap = true
+tracks/57/imported = false
+tracks/57/enabled = true
+tracks/57/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/58/type = "value"
+tracks/58/path = NodePath("spellsD/spellD6:disabled")
+tracks/58/interp = 1
+tracks/58/loop_wrap = true
+tracks/58/imported = false
+tracks/58/enabled = true
+tracks/58/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/59/type = "value"
+tracks/59/path = NodePath("spellsD/spellD7:disabled")
+tracks/59/interp = 1
+tracks/59/loop_wrap = true
+tracks/59/imported = false
+tracks/59/enabled = true
+tracks/59/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/60/type = "value"
+tracks/60/path = NodePath("spellsD/spellD8:disabled")
+tracks/60/interp = 1
+tracks/60/loop_wrap = true
+tracks/60/imported = false
+tracks/60/enabled = true
+tracks/60/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/61/type = "value"
+tracks/61/path = NodePath("spellD:rotation_degrees")
+tracks/61/interp = 1
+tracks/61/loop_wrap = true
+tracks/61/imported = false
+tracks/61/enabled = true
+tracks/61/keys = {
+"times": PoolRealArray( 1, 2, 3, 4, 5, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 90.0, 135.0, 45.0, 90.0, 135.0, 180.0 ]
+}
+tracks/62/type = "value"
+tracks/62/path = NodePath("spellsD:rotation_degrees")
+tracks/62/interp = 1
+tracks/62/loop_wrap = true
+tracks/62/imported = false
+tracks/62/enabled = true
+tracks/62/keys = {
+"times": PoolRealArray( 1, 2, 3, 4, 5, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 90.0, 135.0, 45.0, 90.0, 135.0, 180.0 ]
+}
+tracks/63/type = "value"
+tracks/63/path = NodePath("anim:playback_speed")
+tracks/63/interp = 1
+tracks/63/loop_wrap = true
+tracks/63/imported = false
+tracks/63/enabled = true
+tracks/63/keys = {
+"times": PoolRealArray( 0, 1.9, 2, 4, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.5, 0.5, 1.5, 1.0, 0.5 ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -785,7 +1001,7 @@ tracks/17/keys = {
 "values": [ Vector2( 0, 50 ), Vector2( 0, 250 ), Vector2( 0, 0 ) ]
 }
 tracks/18/type = "value"
-tracks/18/path = NodePath("hitbox3/spell5:position")
+tracks/18/path = NodePath("spells/spell5:position")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/imported = false
@@ -797,7 +1013,7 @@ tracks/18/keys = {
 "values": [ Vector2( -47.9752, 1.1524 ), Vector2( -238.756, 1.53609 ), Vector2( -251.323, 0.712051 ), Vector2( -140.277, -0.0641922 ), Vector2( 0, 0 ) ]
 }
 tracks/19/type = "value"
-tracks/19/path = NodePath("hitbox3/spell6:position")
+tracks/19/path = NodePath("spells/spell6:position")
 tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/imported = false
@@ -809,7 +1025,7 @@ tracks/19/keys = {
 "values": [ Vector2( 46.2797, 0.530029 ), Vector2( 238.993, 1.80144 ), Vector2( 249.976, 0 ), Vector2( 142.957, -0.333617 ), Vector2( 0, 0 ) ]
 }
 tracks/20/type = "value"
-tracks/20/path = NodePath("hitbox3/spell8:position")
+tracks/20/path = NodePath("spells/spell8:position")
 tracks/20/interp = 1
 tracks/20/loop_wrap = true
 tracks/20/imported = false
@@ -821,7 +1037,7 @@ tracks/20/keys = {
 "values": [ Vector2( 0.975647, 48.411 ), Vector2( 0.0661818, 236.982 ), Vector2( -0.569389, 253.077 ), Vector2( -0.200043, 143.491 ), Vector2( 0, 0 ) ]
 }
 tracks/21/type = "value"
-tracks/21/path = NodePath("hitbox3/spell7:position")
+tracks/21/path = NodePath("spells/spell7:position")
 tracks/21/interp = 1
 tracks/21/loop_wrap = true
 tracks/21/imported = false
@@ -977,7 +1193,7 @@ tracks/33/keys = {
 "values": [ 1, 2, 3, 4, 5, 6, 0, 1, 2, 3, 4, 5, 6, 0, 1, 2, 3, 4, 5, 6, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
 }
 tracks/34/type = "value"
-tracks/34/path = NodePath("hitbox3/spell6:rotation_degrees")
+tracks/34/path = NodePath("spells/spell6:rotation_degrees")
 tracks/34/interp = 1
 tracks/34/loop_wrap = true
 tracks/34/imported = false
@@ -989,7 +1205,7 @@ tracks/34/keys = {
 "values": [ 0.0 ]
 }
 tracks/35/type = "value"
-tracks/35/path = NodePath("hitbox3/spell5:rotation_degrees")
+tracks/35/path = NodePath("spells/spell5:rotation_degrees")
 tracks/35/interp = 1
 tracks/35/loop_wrap = true
 tracks/35/imported = false
@@ -1001,7 +1217,7 @@ tracks/35/keys = {
 "values": [ 0.0 ]
 }
 tracks/36/type = "value"
-tracks/36/path = NodePath("hitbox3/spell7:rotation_degrees")
+tracks/36/path = NodePath("spells/spell7:rotation_degrees")
 tracks/36/interp = 1
 tracks/36/loop_wrap = true
 tracks/36/imported = false
@@ -1013,7 +1229,7 @@ tracks/36/keys = {
 "values": [ 90.0 ]
 }
 tracks/37/type = "value"
-tracks/37/path = NodePath("hitbox3/spell8:rotation_degrees")
+tracks/37/path = NodePath("spells/spell8:rotation_degrees")
 tracks/37/interp = 1
 tracks/37/loop_wrap = true
 tracks/37/imported = false
@@ -1025,7 +1241,7 @@ tracks/37/keys = {
 "values": [ 90.0 ]
 }
 tracks/38/type = "value"
-tracks/38/path = NodePath("hitbox3/spell8:scale")
+tracks/38/path = NodePath("spells/spell8:scale")
 tracks/38/interp = 1
 tracks/38/loop_wrap = true
 tracks/38/imported = false
@@ -1037,7 +1253,7 @@ tracks/38/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 0.1, 0.1 ) ]
 }
 tracks/39/type = "value"
-tracks/39/path = NodePath("hitbox3/spell7:scale")
+tracks/39/path = NodePath("spells/spell7:scale")
 tracks/39/interp = 1
 tracks/39/loop_wrap = true
 tracks/39/imported = false
@@ -1049,7 +1265,7 @@ tracks/39/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 0.1, 0.1 ) ]
 }
 tracks/40/type = "value"
-tracks/40/path = NodePath("hitbox3/spell6:scale")
+tracks/40/path = NodePath("spells/spell6:scale")
 tracks/40/interp = 1
 tracks/40/loop_wrap = true
 tracks/40/imported = false
@@ -1061,7 +1277,7 @@ tracks/40/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 0.1, 0.1 ) ]
 }
 tracks/41/type = "value"
-tracks/41/path = NodePath("hitbox3/spell5:scale")
+tracks/41/path = NodePath("spells/spell5:scale")
 tracks/41/interp = 1
 tracks/41/loop_wrap = true
 tracks/41/imported = false
@@ -1073,64 +1289,280 @@ tracks/41/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 0.1, 0.1 ) ]
 }
 tracks/42/type = "value"
-tracks/42/path = NodePath("hitbox3/spell5:disabled")
+tracks/42/path = NodePath("spells/spell5:disabled")
 tracks/42/interp = 1
 tracks/42/loop_wrap = true
 tracks/42/imported = false
 tracks/42/enabled = true
 tracks/42/keys = {
-"times": PoolRealArray( 0, 2, 5.5 ),
+"times": PoolRealArray( 2, 5, 5.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ true, false, true ]
+"values": [ false, true, true ]
 }
 tracks/43/type = "value"
-tracks/43/path = NodePath("hitbox3/spell6:disabled")
+tracks/43/path = NodePath("spells/spell6:disabled")
 tracks/43/interp = 1
 tracks/43/loop_wrap = true
 tracks/43/imported = false
 tracks/43/enabled = true
 tracks/43/keys = {
-"times": PoolRealArray( 0, 2, 5.5 ),
+"times": PoolRealArray( 2, 5, 5.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ true, false, true ]
+"values": [ false, true, true ]
 }
 tracks/44/type = "value"
-tracks/44/path = NodePath("hitbox3/spell7:disabled")
+tracks/44/path = NodePath("spells/spell7:disabled")
 tracks/44/interp = 1
 tracks/44/loop_wrap = true
 tracks/44/imported = false
 tracks/44/enabled = true
 tracks/44/keys = {
-"times": PoolRealArray( 0, 2, 5.5 ),
+"times": PoolRealArray( 2, 5, 5.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ true, false, true ]
+"values": [ false, true, true ]
 }
 tracks/45/type = "value"
-tracks/45/path = NodePath("hitbox3/spell8:disabled")
+tracks/45/path = NodePath("spells/spell8:disabled")
 tracks/45/interp = 1
 tracks/45/loop_wrap = true
 tracks/45/imported = false
 tracks/45/enabled = true
 tracks/45/keys = {
-"times": PoolRealArray( 0, 2, 5.5 ),
+"times": PoolRealArray( 2, 5, 5.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ true, false, true ]
+"values": [ false, true, true ]
 }
 tracks/46/type = "value"
-tracks/46/path = NodePath("hitbox3:monitorable")
+tracks/46/path = NodePath("spellD:rotation_degrees")
 tracks/46/interp = 1
 tracks/46/loop_wrap = true
 tracks/46/imported = false
 tracks/46/enabled = true
 tracks/46/keys = {
-"times": PoolRealArray( 0, 2 ),
+"times": PoolRealArray( 1, 2, 3, 4, 5, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 90.0, 135.0, 45.0, 90.0, 135.0, 180.0 ]
+}
+tracks/47/type = "value"
+tracks/47/path = NodePath("spellsD:rotation_degrees")
+tracks/47/interp = 1
+tracks/47/loop_wrap = true
+tracks/47/imported = false
+tracks/47/enabled = true
+tracks/47/keys = {
+"times": PoolRealArray( 1, 2, 3, 4, 5, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 90.0, 135.0, 45.0, 90.0, 135.0, 180.0 ]
+}
+tracks/48/type = "value"
+tracks/48/path = NodePath("spellsD/spellD6:rotation_degrees")
+tracks/48/interp = 1
+tracks/48/loop_wrap = true
+tracks/48/imported = false
+tracks/48/enabled = true
+tracks/48/keys = {
+"times": PoolRealArray( 0, 4 ),
 "transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 135.0, 135.0 ]
+}
+tracks/49/type = "value"
+tracks/49/path = NodePath("spellsD/spellD5:rotation_degrees")
+tracks/49/interp = 1
+tracks/49/loop_wrap = true
+tracks/49/imported = false
+tracks/49/enabled = true
+tracks/49/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 45.0, 45.0 ]
+}
+tracks/50/type = "value"
+tracks/50/path = NodePath("spellsD/spellD7:rotation_degrees")
+tracks/50/interp = 1
+tracks/50/loop_wrap = true
+tracks/50/imported = false
+tracks/50/enabled = true
+tracks/50/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 45.0, 45.0 ]
+}
+tracks/51/type = "value"
+tracks/51/path = NodePath("spellsD/spellD8:rotation_degrees")
+tracks/51/interp = 1
+tracks/51/loop_wrap = true
+tracks/51/imported = false
+tracks/51/enabled = true
+tracks/51/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -44.9998, -44.9998 ]
+}
+tracks/52/type = "value"
+tracks/52/path = NodePath("spellD/spellD1:rotation_degrees")
+tracks/52/interp = 1
+tracks/52/loop_wrap = true
+tracks/52/imported = false
+tracks/52/enabled = true
+tracks/52/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -44.9999, -44.9999 ]
+}
+tracks/53/type = "value"
+tracks/53/path = NodePath("spellD/spellD2:rotation_degrees")
+tracks/53/interp = 1
+tracks/53/loop_wrap = true
+tracks/53/imported = false
+tracks/53/enabled = true
+tracks/53/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 45.0, 45.0 ]
+}
+tracks/54/type = "value"
+tracks/54/path = NodePath("spellD/spellD3:rotation_degrees")
+tracks/54/interp = 1
+tracks/54/loop_wrap = true
+tracks/54/imported = false
+tracks/54/enabled = true
+tracks/54/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 135.0, 135.0 ]
+}
+tracks/55/type = "value"
+tracks/55/path = NodePath("spellD/spellD4:rotation_degrees")
+tracks/55/interp = 1
+tracks/55/loop_wrap = true
+tracks/55/imported = false
+tracks/55/enabled = true
+tracks/55/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -135.0, -135.0 ]
+}
+tracks/56/type = "value"
+tracks/56/path = NodePath("spellD/spellD1:visible")
+tracks/56/interp = 1
+tracks/56/loop_wrap = true
+tracks/56/imported = false
+tracks/56/enabled = true
+tracks/56/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ false, true ]
+"values": [ true, false, true ]
+}
+tracks/57/type = "value"
+tracks/57/path = NodePath("spellD/spellD2:visible")
+tracks/57/interp = 1
+tracks/57/loop_wrap = true
+tracks/57/imported = false
+tracks/57/enabled = true
+tracks/57/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/58/type = "value"
+tracks/58/path = NodePath("spellD/spellD3:visible")
+tracks/58/interp = 1
+tracks/58/loop_wrap = true
+tracks/58/imported = false
+tracks/58/enabled = true
+tracks/58/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/59/type = "value"
+tracks/59/path = NodePath("spellD/spellD4:visible")
+tracks/59/interp = 1
+tracks/59/loop_wrap = true
+tracks/59/imported = false
+tracks/59/enabled = true
+tracks/59/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/60/type = "value"
+tracks/60/path = NodePath("spellsD/spellD5:disabled")
+tracks/60/interp = 1
+tracks/60/loop_wrap = true
+tracks/60/imported = false
+tracks/60/enabled = true
+tracks/60/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/61/type = "value"
+tracks/61/path = NodePath("spellsD/spellD6:disabled")
+tracks/61/interp = 1
+tracks/61/loop_wrap = true
+tracks/61/imported = false
+tracks/61/enabled = true
+tracks/61/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/62/type = "value"
+tracks/62/path = NodePath("spellsD/spellD7:disabled")
+tracks/62/interp = 1
+tracks/62/loop_wrap = true
+tracks/62/imported = false
+tracks/62/enabled = true
+tracks/62/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/63/type = "value"
+tracks/63/path = NodePath("spellsD/spellD8:disabled")
+tracks/63/interp = 1
+tracks/63/loop_wrap = true
+tracks/63/imported = false
+tracks/63/enabled = true
+tracks/63/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/64/type = "value"
+tracks/64/path = NodePath("anim:playback_speed")
+tracks/64/interp = 1
+tracks/64/loop_wrap = true
+tracks/64/imported = false
+tracks/64/enabled = true
+tracks/64/keys = {
+"times": PoolRealArray( 0, 1.9, 2, 4, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.5, 0.5, 1.5, 1.0, 0.5 ]
 }
 
 [sub_resource type="RectangleShape2D" id=3]
@@ -1180,13 +1612,16 @@ health = 8
 min_move_distance = 300
 
 [node name="sprite" type="Sprite" parent="."]
-position = Vector2( 13.7971, -9.59799 )
+position = Vector2( -13.7971, -8.99812 )
 texture = ExtResource( 2 )
+flip_h = true
 vframes = 2
 hframes = 3
 frame = 5
 
 [node name="anim" type="AnimationPlayer" parent="."]
+playback_speed = 0.5
+anims/firemagicDD = ExtResource( 3 )
 anims/luciferL = SubResource( 1 )
 anims/luciferR = SubResource( 2 )
 
@@ -1219,44 +1654,39 @@ __meta__ = {
 }
 
 [node name="body" type="CollisionShape2D" parent="hitbox"]
-visible = false
-position = Vector2( 0.281418, -8.7238 )
+position = Vector2( -0.56282, -8.16097 )
 shape = SubResource( 5 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="body2" type="CollisionShape2D" parent="hitbox"]
-visible = false
-position = Vector2( -5.06544, 10.6937 )
-rotation = 0.575959
+position = Vector2( 6.19109, 12.1008 )
+rotation = -0.575959
 shape = SubResource( 6 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="body3" type="CollisionShape2D" parent="hitbox"]
-visible = false
-position = Vector2( 9.84946, 23.3573 )
-rotation = -0.261799
+position = Vector2( -9.84944, 25.3272 )
+rotation = 0.261799
 shape = SubResource( 7 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="body4" type="CollisionShape2D" parent="hitbox"]
-visible = false
-position = Vector2( -18.8547, -3.65837 )
-rotation = 0.610865
+position = Vector2( 18.5733, -3.65837 )
+rotation = -0.610865
 shape = SubResource( 8 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="body5" type="CollisionShape2D" parent="hitbox"]
-visible = false
-position = Vector2( 19.6989, -0.281415 )
-rotation = -0.872665
+position = Vector2( -20.8246, -1.43051e-06 )
+rotation = 0.872665
 shape = SubResource( 9 )
 __meta__ = {
 "_edit_lock_": true
@@ -1265,42 +1695,37 @@ __meta__ = {
 [node name="audioeffect" type="Node" parent="."]
 
 [node name="damagesound" type="AudioStreamPlayer2D" parent="audioeffect"]
-stream = ExtResource( 3 )
+stream = ExtResource( 4 )
 
 [node name="anim2" type="AnimationPlayer" parent="."]
-anims/firemagic+ = ExtResource( 4 )
+anims/firemagic+ = ExtResource( 5 )
 
 [node name="anim3" type="AnimationPlayer" parent="."]
-playback_speed = 2.0
-anims/firemagicD = ExtResource( 5 )
+playback_speed = 0.5
+anims/firemagicD = ExtResource( 3 )
 
 [node name="spellD" type="Node2D" parent="."]
-editor/display_folded = true
-rotation = 0.628319
+rotation = 3.14159
 
 [node name="spellD1" type="Sprite" parent="spellD"]
-visible = false
 position = Vector2( -45, 45 )
 rotation = -0.785396
 texture = ExtResource( 6 )
 vframes = 12
 
 [node name="spellD2" type="Sprite" parent="spellD"]
-visible = false
 position = Vector2( -45, -45 )
 rotation = 0.785398
 texture = ExtResource( 6 )
 vframes = 12
 
 [node name="spellD3" type="Sprite" parent="spellD"]
-visible = false
 position = Vector2( 45, -45 )
 rotation = 2.35619
 texture = ExtResource( 6 )
 vframes = 12
 
 [node name="spellD4" type="Sprite" parent="spellD"]
-visible = false
 position = Vector2( 45, 45 )
 rotation = -2.35619
 texture = ExtResource( 6 )
@@ -1310,7 +1735,6 @@ vframes = 12
 editor/display_folded = true
 
 [node name="spell1" type="Sprite" parent="spell"]
-visible = false
 position = Vector2( 0, -0.141 )
 rotation = 3.14159
 texture = ExtResource( 6 )
@@ -1318,88 +1742,67 @@ vframes = 12
 frame = 11
 
 [node name="spell2" type="Sprite" parent="spell"]
-visible = false
 texture = ExtResource( 6 )
 vframes = 12
 frame = 11
 
 [node name="spell3" type="Sprite" parent="spell"]
-visible = false
 rotation = -1.5708
 texture = ExtResource( 6 )
 vframes = 12
 frame = 11
 
 [node name="spell4" type="Sprite" parent="spell"]
-visible = false
 rotation = 1.5708
 texture = ExtResource( 6 )
 vframes = 12
 frame = 11
 
-[node name="hitbox2" type="Area2D" parent="."]
+[node name="spells" type="Area2D" parent="."]
 editor/display_folded = true
-visible = false
-rotation = 0.628319
-monitoring = false
-monitorable = false
 
-[node name="spellD5" type="CollisionShape2D" parent="hitbox2"]
-position = Vector2( -43.8173, -42.3064 )
-rotation = 0.785398
+[node name="spell5" type="CollisionShape2D" parent="spells"]
+scale = Vector2( 0.1, 0.1 )
 shape = SubResource( 10 )
+disabled = true
 
-[node name="spellD6" type="CollisionShape2D" parent="hitbox2"]
-position = Vector2( 43.4867, -43.7137 )
-rotation = 2.35619
+[node name="spell6" type="CollisionShape2D" parent="spells"]
+scale = Vector2( 0.1, 0.1 )
 shape = SubResource( 11 )
+disabled = true
 
-[node name="spellD7" type="CollisionShape2D" parent="hitbox2"]
-position = Vector2( 43.8343, 43.509 )
-rotation = 0.785398
+[node name="spell7" type="CollisionShape2D" parent="spells"]
+rotation = 1.5708
+scale = Vector2( 0.1, 0.1 )
 shape = SubResource( 12 )
+disabled = true
 
-[node name="spellD8" type="CollisionShape2D" parent="hitbox2"]
-position = Vector2( -42.9835, 44.7316 )
-rotation = -0.785395
+[node name="spell8" type="CollisionShape2D" parent="spells"]
+rotation = 1.5708
+scale = Vector2( 0.1, 0.1 )
 shape = SubResource( 13 )
+disabled = true
 
-[node name="hitbox3" type="Area2D" parent="."]
-editor/display_folded = true
-visible = false
-monitoring = false
-monitorable = false
+[node name="spellsD" type="Area2D" parent="."]
+rotation = 3.14159
 
-[node name="spell5" type="CollisionShape2D" parent="hitbox3"]
-scale = Vector2( 0.1, 0.1 )
+[node name="spellD5" type="CollisionShape2D" parent="spellsD"]
+position = Vector2( 43.8174, 42.3063 )
+rotation = 0.785398
 shape = SubResource( 14 )
-disabled = true
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="spell6" type="CollisionShape2D" parent="hitbox3"]
-scale = Vector2( 0.1, 0.1 )
+[node name="spellD6" type="CollisionShape2D" parent="spellsD"]
+position = Vector2( -43.4866, 43.7138 )
+rotation = 2.35619
 shape = SubResource( 15 )
-disabled = true
-__meta__ = {
-"_edit_lock_": true
-}
+one_way_collision_margin = 10.0
 
-[node name="spell7" type="CollisionShape2D" parent="hitbox3"]
-rotation = 1.5708
-scale = Vector2( 0.1, 0.1 )
+[node name="spellD7" type="CollisionShape2D" parent="spellsD"]
+position = Vector2( -43.8344, -43.5089 )
+rotation = 0.785398
 shape = SubResource( 16 )
-disabled = true
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="spell8" type="CollisionShape2D" parent="hitbox3"]
-rotation = 1.5708
-scale = Vector2( 0.1, 0.1 )
+[node name="spellD8" type="CollisionShape2D" parent="spellsD"]
+position = Vector2( 42.9834, -44.7317 )
+rotation = -0.785395
 shape = SubResource( 17 )
-disabled = true
-__meta__ = {
-"_edit_lock_": true
-}
