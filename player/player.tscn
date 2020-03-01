@@ -8,7 +8,7 @@
 [ext_resource path="res://sounds/RPG Sound Pack/battle/swing.wav" type="AudioStream" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 7.74588, 4.756 )
+extents = Vector2( 3.22655, 4.756 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "attdown"
@@ -503,8 +503,9 @@ tracks/3/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="RectangleShape2D" id=13]
-extents = Vector2( 8.5, 23.8036 )
+[sub_resource type="CapsuleShape2D" id=13]
+radius = 5.86669
+height = 35.7462
 
 [node name="player" type="KinematicBody2D"]
 rotation = 0.00256337
@@ -517,9 +518,12 @@ TYPE = "PLAYER"
 health = 6
 
 [node name="shape" type="CollisionShape2D" parent="."]
-position = Vector2( -0.736966, 19.3297 )
+position = Vector2( -0.90955, 19.3301 )
 rotation = -0.00256827
 shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
@@ -550,6 +554,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2( -0.342071, 1.20897 )
 shape = SubResource( 13 )
 __meta__ = {
 "_edit_lock_": true
