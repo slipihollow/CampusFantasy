@@ -10,6 +10,7 @@ extents = Vector2( 16.0181, 15.9897 )
 extents = Vector2( 15.1681, 17.9359 )
 
 [node name="keydoor" type="StaticBody2D"]
+z_index = 1
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
