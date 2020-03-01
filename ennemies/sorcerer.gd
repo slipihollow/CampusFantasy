@@ -1,6 +1,6 @@
 extends "res://engine/entity.gd"
 
-const DAMAGE = 1
+const DAMAGE = 0.75
 
 var player : Player
 

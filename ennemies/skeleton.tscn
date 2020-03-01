@@ -57,7 +57,7 @@ tracks/3/keys = {
 "values": [ Vector2( 6.29057, 6.68373 ), Vector2( 7.60879, 4.65051 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("hitbox2/CollisionShape2D2:rotation_degrees")
+tracks/4/path = NodePath("spear/CollisionShape2D2:rotation_degrees")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -69,7 +69,7 @@ tracks/4/keys = {
 "values": [ -15.0, -30.0 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("hitbox2/CollisionShape2D2:position")
+tracks/5/path = NodePath("spear/CollisionShape2D2:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -242,7 +242,7 @@ tracks/3/keys = {
 "values": [ Vector2( -6.32073, 6.44605 ), Vector2( -8.00195, 4.65051 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("hitbox2/CollisionShape2D2:rotation_degrees")
+tracks/4/path = NodePath("spear/CollisionShape2D2:rotation_degrees")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -254,7 +254,7 @@ tracks/4/keys = {
 "values": [ 15.0, 30.0 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("hitbox2/CollisionShape2D2:position")
+tracks/5/path = NodePath("spear/CollisionShape2D2:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -481,11 +481,10 @@ __meta__ = {
 [node name="damagesound" type="AudioStreamPlayer2D" parent="audioeffect"]
 stream = ExtResource( 3 )
 
-[node name="hitbox2" type="Area2D" parent="."]
+[node name="spear" type="Area2D" parent="."]
 visible = false
-monitoring = false
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="hitbox2"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="spear"]
 position = Vector2( -7.20175, 5.71568 )
 rotation = -0.261799
 shape = SubResource( 9 )

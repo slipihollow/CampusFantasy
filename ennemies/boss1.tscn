@@ -306,9 +306,9 @@ extents = Vector2( 20.4685, 6.53091 )
 
 [node name="boss1" type="KinematicBody2D"]
 script = ExtResource( 1 )
-MAXHEALTH = 15
-SPEED = 75.0
-health = 15
+MAXHEALTH = 12
+SPEED = 60.0
+health = 12
 min_move_distance = 500
 knock = 1
 
