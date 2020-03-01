@@ -125,7 +125,7 @@ tracks/9/keys = {
 "values": [ true, false ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("hitbox2/magicball:position")
+tracks/10/path = NodePath("spells/magicball:position")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
@@ -137,7 +137,7 @@ tracks/10/keys = {
 "values": [ Vector2( -50, 0 ), Vector2( -35, 35 ), Vector2( 0, 50 ), Vector2( 35, 35 ), Vector2( 50, 0 ), Vector2( 35, -35 ), Vector2( 0, -50 ), Vector2( -35, -35 ), Vector2( -60, 0 ), Vector2( -50, 50 ), Vector2( 0, 75 ), Vector2( 50, 50 ), Vector2( 75, 0 ), Vector2( 50, -50 ), Vector2( 0, -75 ), Vector2( -50, -50 ), Vector2( -85, 0 ) ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("hitbox2/magicball:disabled")
+tracks/11/path = NodePath("spells/magicball:disabled")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
@@ -161,7 +161,7 @@ tracks/12/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ) ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("hitbox2/magicball:scale")
+tracks/13/path = NodePath("spells/magicball:scale")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
