@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://player/goblinnpcU.gd" type="Script" id=1]
+[ext_resource path="res://ennemies/creatures/goblin.png" type="Texture" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "goblinnpcU"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 22, 29, 22 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0.730164, -2.92072 ), Vector2( -7.30179, -2.92072 ), Vector2( 0, -4.38107 ) ]
+}
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 6.50555
+
+[node name="gobinnpcU" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="sprite" type="Sprite" parent="."]
+position = Vector2( 0, -4.38107 )
+texture = ExtResource( 2 )
+vframes = 5
+hframes = 11
+frame = 22
+
+[node name="anim" type="AnimationPlayer" parent="."]
+anims/goblinnpcU = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}

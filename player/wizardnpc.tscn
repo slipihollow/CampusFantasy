@@ -1,0 +1,127 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://player/wizardnpc.gd" type="Script" id=1]
+[ext_resource path="res://ennemies/characters/Arena_Game_Sprites_by_RedKnight91-CCBYSA3.png" type="Texture" id=2]
+[ext_resource path="res://ennemies/creatures/magicball.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "wizardnpc"
+length = 5.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("sprite:z_index")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("sprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -2.16345, -5.76921 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("sprite2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("sprite2:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 3, 3.2, 3.4, 3.6, 3.8, 4, 4.2, 4.4, 4.6, 4.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3, 1, 2, 1, 2, 3, 3 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("sprite2:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 3, 4, 5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 90.0, 180.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("sprite:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 2.5, 3, 5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.95, 0.95 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 6.7112
+
+[node name="wizardnpc" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="sprite" type="Sprite" parent="."]
+position = Vector2( -2.16345, -5.76921 )
+z_index = 1
+texture = ExtResource( 2 )
+hframes = 9
+frame = 2
+
+[node name="anim" type="AnimationPlayer" parent="."]
+anims/wizardnpc = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 2.16346, 3.24518 )
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="sprite2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0.36058, -18.7499 )
+rotation = 2.89725
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 3 )
+vframes = 4
+frame = 3
