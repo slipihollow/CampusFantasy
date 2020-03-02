@@ -513,9 +513,9 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_horizontal_guides_": [ 142.201 ]
 }
-MAXHEALTH = 6
+MAXHEALTH = 12
 TYPE = "PLAYER"
-health = 6
+health = 12
 
 [node name="shape" type="CollisionShape2D" parent="."]
 position = Vector2( -0.90955, 19.3301 )

@@ -67,3 +67,17 @@ func controls_loop():
 
 	movedir.x = -int(LEFT) + int(RIGHT)
 	movedir.y = -int(UP) + int(DOWN)
+##################
+func _exit_tree() -> void:
+	
+	DataManager.set_data("player_health", health)
+	DataManager.set_data("player_questies", questies)
+	if questies == 0:
+		pass
+
+func _enter_tree() -> void:
+	if DataManager.has_data("player_health"):
+		health = DataManager.get_data("player_health")
+		
+	if DataManager.has_data("player_questies"):
+		questies = DataManager.get_data("player_questies")
