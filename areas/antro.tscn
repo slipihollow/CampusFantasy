@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://areas/antro.gd" type="Script" id=1]
 [ext_resource path="res://areas/doortrigger16.gd" type="Script" id=2]
@@ -11,12 +11,13 @@
 [ext_resource path="res://tiles/indoor.tres" type="TileSet" id=9]
 [ext_resource path="res://tiles/chaise.tres" type="TileSet" id=10]
 [ext_resource path="res://tiles/shop.tres" type="TileSet" id=11]
-[ext_resource path="res://Godot_menu/Theme/Theme_test.tres" type="Theme" id=12]
-[ext_resource path="res://ui/inté.gd" type="Script" id=13]
-[ext_resource path="res://theme/Campus_Theme.tres" type="Theme" id=14]
-[ext_resource path="res://ui/inté_gen.gd" type="Script" id=15]
-[ext_resource path="res://sounds/Restaurant Ambiance -SoundBible.com-628640170.wav" type="AudioStream" id=16]
-[ext_resource path="res://sounds/Menu_1_mp3.wav" type="AudioStream" id=17]
+[ext_resource path="res://ui/hud.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Godot_menu/Theme/Theme_test.tres" type="Theme" id=13]
+[ext_resource path="res://ui/inté.gd" type="Script" id=14]
+[ext_resource path="res://theme/Campus_Theme.tres" type="Theme" id=15]
+[ext_resource path="res://ui/inté_gen.gd" type="Script" id=16]
+[ext_resource path="res://sounds/Restaurant Ambiance -SoundBible.com-628640170.wav" type="AudioStream" id=17]
+[ext_resource path="res://sounds/Menu_1_mp3.wav" type="AudioStream" id=18]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 24.823, 10 )
@@ -36,7 +37,6 @@ shape = SubResource( 1 )
 [node name="player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1654.17, 810.063 )
 z_index = 1
-SPEED = 150.0
 
 [node name="Camera" parent="." instance=ExtResource( 4 )]
 visible = false
@@ -49,6 +49,7 @@ tile_data = PoolIntArray( 65538, 536870916, 0, 131072, 536870914, 0, 131077, 536
 
 [node name="stylo" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1397.11, 1003.35 )
+scale = Vector2( 5, 5 )
 
 [node name="floor" type="TileMap" parent="."]
 z_index = -3
@@ -111,6 +112,8 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="hud" parent="." instance=ExtResource( 12 )]
+
 [node name="Control" type="Control" parent="."]
 visible = false
 anchor_top = 1.0
@@ -120,7 +123,7 @@ margin_left = -2.85516
 margin_top = 242.364
 margin_right = -2.85516
 margin_bottom = 320.364
-theme = ExtResource( 12 )
+theme = ExtResource( 13 )
 
 [node name="Timer" type="Timer" parent="Control"]
 wait_time = 0.05
@@ -132,7 +135,7 @@ margin_left = 5.0
 margin_top = -340.0
 margin_right = 643.0
 margin_bottom = -251.0
-script = ExtResource( 13 )
+script = ExtResource( 14 )
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Control/PopupDialog"]
 anchor_top = 1.0
@@ -148,11 +151,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -11.0
 margin_right = -11.0
-theme = ExtResource( 14 )
+theme = ExtResource( 15 )
 bbcode_enabled = true
 bbcode_text = "Ici c'est l'Anthropole, le bâtiment principal des Lettres. Tu y trouveras une cafféteria, la librairie Basta, une papetterie qui vend des cigarettes, l'Epicentre (un magasin bio), et un bancomat. Il y a un questie à trouver ici."
 text = "Ici c'est l'Anthropole, le bâtiment principal des Lettres. Tu y trouveras une cafféteria, la librairie Basta, une papetterie qui vend des cigarettes, l'Epicentre (un magasin bio), et un bancomat. Il y a un questie à trouver ici."
-script = ExtResource( 15 )
+script = ExtResource( 16 )
 
 [node name="Button" type="Button" parent="Control/PopupDialog"]
 anchor_left = 1.0
@@ -167,20 +170,20 @@ text = "Intèressant..."
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 951.885, 638.907 )
-stream = ExtResource( 16 )
+stream = ExtResource( 17 )
 volume_db = -10.0
 autoplay = true
 max_distance = 200.0
 
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 1556.72, 996.635 )
-stream = ExtResource( 16 )
+stream = ExtResource( 17 )
 volume_db = -10.0
 autoplay = true
 max_distance = 200.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 17 )
+stream = ExtResource( 18 )
 volume_db = -15.0
 autoplay = true
 [connection signal="body_entered" from="doortrigger16" to="doortrigger16" method="_on_doortrigger16_body_entered"]

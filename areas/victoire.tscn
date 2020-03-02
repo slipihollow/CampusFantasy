@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://areas/inscri.gd" type="Script" id=1]
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://ui/inté_gen.gd" type="Script" id=8]
 [ext_resource path="res://areas/doortrigger6.gd" type="Script" id=9]
 [ext_resource path="res://sounds/Funky-Pixel-Town.wav" type="AudioStream" id=10]
+[ext_resource path="res://ui/hud.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 13.5527, 10 )
@@ -113,6 +114,8 @@ one_way_collision = true
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
 autoplay = true
+
+[node name="hud" parent="." instance=ExtResource( 11 )]
 [connection signal="timeout" from="Control/Timer" to="Control/PopupDialog/NinePatchRect/RichTextLabel" method="_on_Timer_timeout"]
 [connection signal="popup_hide" from="Control/PopupDialog" to="Control/PopupDialog" method="_on_PopupDialog_popup_hide"]
 [connection signal="pressed" from="Control/PopupDialog/Button" to="Control/PopupDialog" method="_on_Button_pressed"]

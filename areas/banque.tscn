@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://areas/banque.gd" type="Script" id=1]
 [ext_resource path="res://engine/Camera.tscn" type="PackedScene" id=2]
@@ -10,13 +10,14 @@
 [ext_resource path="res://tiles/indoor.tres" type="TileSet" id=8]
 [ext_resource path="res://tiles/money.tres" type="TileSet" id=9]
 [ext_resource path="res://tiles/chaise.tres" type="TileSet" id=10]
-[ext_resource path="res://areas/doortrigger10.gd" type="Script" id=11]
-[ext_resource path="res://Godot_menu/Theme/Theme_test.tres" type="Theme" id=12]
-[ext_resource path="res://ui/inté.gd" type="Script" id=13]
-[ext_resource path="res://theme/Campus_Theme.tres" type="Theme" id=14]
-[ext_resource path="res://ui/inté_gen.gd" type="Script" id=15]
-[ext_resource path="res://sounds/party-crowd-daniel_simon.wav" type="AudioStream" id=16]
-[ext_resource path="res://sounds/The-Monster-Factory_Looping.wav" type="AudioStream" id=17]
+[ext_resource path="res://ui/hud.tscn" type="PackedScene" id=11]
+[ext_resource path="res://areas/doortrigger10.gd" type="Script" id=12]
+[ext_resource path="res://Godot_menu/Theme/Theme_test.tres" type="Theme" id=13]
+[ext_resource path="res://ui/inté.gd" type="Script" id=14]
+[ext_resource path="res://theme/Campus_Theme.tres" type="Theme" id=15]
+[ext_resource path="res://ui/inté_gen.gd" type="Script" id=16]
+[ext_resource path="res://sounds/party-crowd-daniel_simon.wav" type="AudioStream" id=17]
+[ext_resource path="res://sounds/The-Monster-Factory_Looping.wav" type="AudioStream" id=18]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 15.0076, 10 )
@@ -29,10 +30,10 @@ visible = false
 
 [node name="player" parent="." instance=ExtResource( 3 )]
 z_index = 1
-SPEED = 135.0
 
 [node name="coffre" parent="." instance=ExtResource( 4 )]
 position = Vector2( 514.113, 86.7544 )
+scale = Vector2( 5, 5 )
 
 [node name="floor" type="TileMap" parent="."]
 z_index = -3
@@ -85,9 +86,11 @@ cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( -65538, 66, 0, 65534, 66, 0, 38, 66, 0, 131096, 73, 0, 131108, 73, 0, 131110, 66, 0, 196632, 73, 0, 196635, 73, 0, 196639, 73, 0, 196643, 73, 0, 262182, 66, 0, 393254, 66, 0, 458768, 72, 0, 524298, 72, 0, 524304, 71, 0, 524326, 66, 0, 589834, 71, 0, 589840, 71, 0, 720894, 66, 0, 655370, 72, 0, 655376, 72, 0, 655398, 66, 0, 720906, 71, 0, 720912, 71, 0, 786442, 72, 0, 786470, 66, 0, 851978, 71, 0, 917514, 72, 0, 917542, 66, 0, 983050, 71, 0, 983056, 72, 0, 1048592, 71, 0, 1048614, 66, 0, 1114128, 72, 0, 1179664, 71, 0, 1179686, 66, 0, 1310758, 66, 0 )
 
+[node name="hud" parent="." instance=ExtResource( 11 )]
+
 [node name="doortrigger10" type="Area2D" parent="."]
 position = Vector2( -818.763, 136.414 )
-script = ExtResource( 11 )
+script = ExtResource( 12 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="doortrigger10"]
 position = Vector2( 1.54755, 36.0129 )
@@ -104,7 +107,7 @@ margin_left = -2.85516
 margin_top = -117.636
 margin_right = -2.85516
 margin_bottom = -39.636
-theme = ExtResource( 12 )
+theme = ExtResource( 13 )
 
 [node name="Timer" type="Timer" parent="CanvasLayer/Control"]
 wait_time = 0.05
@@ -116,7 +119,7 @@ margin_left = 4.68323
 margin_top = -324.806
 margin_right = 642.683
 margin_bottom = -250.806
-script = ExtResource( 13 )
+script = ExtResource( 14 )
 
 [node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Control/PopupDialog"]
 anchor_top = 1.0
@@ -131,11 +134,11 @@ margin_bottom = -20.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -11.0
-theme = ExtResource( 14 )
+theme = ExtResource( 15 )
 bbcode_enabled = true
 bbcode_text = "Ici c'est Internef, le bâtiment des HEC et Droit. Tu y trouveras une bibliothéque, ainsi qu'un des rares bancomats sur le campus (avec Anthropole). Tu as un QUESTIE à trouver ici."
 text = "Ici c'est Internef, le bâtiment des HEC et Droit. Tu y trouveras une bibliothéque, ainsi qu'un des rares bancomats sur le campus (avec Anthropole). Tu as un QUESTIE à trouver ici."
-script = ExtResource( 15 )
+script = ExtResource( 16 )
 
 [node name="Button" type="Button" parent="CanvasLayer/Control/PopupDialog"]
 anchor_left = 1.0
@@ -150,12 +153,12 @@ text = "Intèressant..."
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 275.013, 212.399 )
-stream = ExtResource( 16 )
+stream = ExtResource( 17 )
 autoplay = true
 max_distance = 350.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 17 )
+stream = ExtResource( 18 )
 volume_db = -5.0
 autoplay = true
 [connection signal="body_entered" from="doortrigger10" to="doortrigger10" method="_on_doortrigger10_body_entered"]

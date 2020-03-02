@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://areas/labo.gd" type="Script" id=1]
 [ext_resource path="res://engine/Camera.tscn" type="PackedScene" id=2]
@@ -8,13 +8,15 @@
 [ext_resource path="res://tiles/insidefloor2.tres" type="TileSet" id=6]
 [ext_resource path="res://tiles/indoor.tres" type="TileSet" id=7]
 [ext_resource path="res://tiles/labo.tres" type="TileSet" id=8]
-[ext_resource path="res://pickups/crystal.tscn" type="PackedScene" id=9]
-[ext_resource path="res://areas/doortrigger14.gd" type="Script" id=10]
-[ext_resource path="res://Godot_menu/Theme/Theme_test.tres" type="Theme" id=11]
-[ext_resource path="res://ui/inté.gd" type="Script" id=12]
-[ext_resource path="res://theme/Campus_Theme.tres" type="Theme" id=13]
-[ext_resource path="res://ui/inté_gen.gd" type="Script" id=14]
-[ext_resource path="res://sounds/Discover (online-audio-converter.com).wav" type="AudioStream" id=15]
+[ext_resource path="res://ui/hud.tscn" type="PackedScene" id=9]
+[ext_resource path="res://pickups/crystal.tscn" type="PackedScene" id=10]
+[ext_resource path="res://pickups/food1.tscn" type="PackedScene" id=11]
+[ext_resource path="res://areas/doortrigger14.gd" type="Script" id=12]
+[ext_resource path="res://Godot_menu/Theme/Theme_test.tres" type="Theme" id=13]
+[ext_resource path="res://ui/inté.gd" type="Script" id=14]
+[ext_resource path="res://theme/Campus_Theme.tres" type="Theme" id=15]
+[ext_resource path="res://ui/inté_gen.gd" type="Script" id=16]
+[ext_resource path="res://sounds/Discover (online-audio-converter.com).wav" type="AudioStream" id=17]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 12.3188, 10 )
@@ -31,7 +33,6 @@ __meta__ = {
 [node name="player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 618.931, 630.508 )
 z_index = 1
-SPEED = 200.0
 min_move_distance = 200
 
 [node name="ennemies" parent="." instance=ExtResource( 4 )]
@@ -81,12 +82,19 @@ cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( 262212, 1, 0, 262213, 4, 0, 262217, 3, 0, 262218, 4, 0, 524365, 6, 0, 589890, 5, 0, 2490370, 3, 0, 2490372, 4, 0, 2621450, 2, 0, 2621451, 4, 0, 2621455, 3, 0, 2621457, 1, 0, 2621468, 4, 0, 2621473, 3, 0, 2621486, 1, 0, 2621489, 6, 0, 2621494, 3, 0, 2621496, 1, 0, 2621498, 1, 0, 2621500, 3, 0, 2621501, 2, 0, 2621503, 2, 0, 2621509, 4, 0, 2621512, 4, 0, 2621515, 3, 0, 2621517, 1, 0, 2687016, 5, 0 )
 
-[node name="crystal" parent="." instance=ExtResource( 9 )]
+[node name="hud" parent="." instance=ExtResource( 9 )]
+
+[node name="crystal" parent="." instance=ExtResource( 10 )]
 position = Vector2( -461.311, -241.075 )
+scale = Vector2( 5, 5 )
+
+[node name="food1" parent="." instance=ExtResource( 11 )]
+position = Vector2( 714.522, 28.4858 )
+scale = Vector2( 2, 2 )
 
 [node name="doortrigger14" type="Area2D" parent="."]
 position = Vector2( 622.222, 664.541 )
-script = ExtResource( 10 )
+script = ExtResource( 12 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="doortrigger14"]
 position = Vector2( -1.4577, 51.251 )
@@ -104,7 +112,7 @@ margin_left = -2.85516
 margin_top = -117.636
 margin_right = -2.85516
 margin_bottom = -39.636
-theme = ExtResource( 11 )
+theme = ExtResource( 13 )
 
 [node name="Timer" type="Timer" parent="CanvasLayer/Control"]
 wait_time = 0.05
@@ -116,7 +124,7 @@ margin_left = 5.0
 margin_top = -351.0
 margin_right = 643.0
 margin_bottom = -251.0
-script = ExtResource( 12 )
+script = ExtResource( 14 )
 
 [node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Control/PopupDialog"]
 anchor_top = 1.0
@@ -134,11 +142,11 @@ margin_left = 9.31757
 margin_top = -28.8775
 margin_right = -1.68243
 margin_bottom = 12.1225
-theme = ExtResource( 13 )
+theme = ExtResource( 15 )
 bbcode_enabled = true
-bbcode_text = "Ici c'est le Batochime. C'est un des endroits où on fait le plus de laboratoire (la Science avec un grand S s'il vous plait). D'ailleurs le prix nobel de chimie a sa place de parc à vèlo rèsèrvèe devant le bâtiment. Les endroits qui contiennent des laboratoires sont gènèralement dèdaleux et bien dèg esthètiquement. Pour ça il va falloir trouver ton chemin dans ce dèdale. Il y a un QUESTIE et un BOSS à trouver ici."
-text = "Ici c'est le Batochime. C'est un des endroits où on fait le plus de laboratoire (la Science avec un grand S s'il vous plait). D'ailleurs le prix nobel de chimie a sa place de parc à vèlo rèsèrvèe devant le bâtiment. Les endroits qui contiennent des laboratoires sont gènèralement dèdaleux et bien dèg esthètiquement. Pour ça il va falloir trouver ton chemin dans ce dèdale. Il y a un QUESTIE et un BOSS à trouver ici."
-script = ExtResource( 14 )
+bbcode_text = "Ici c'est le Biophore. C'est un des endroits où on fait le plus de laboratoire (la Science avec un grand S s'il vous plait). D'ailleurs le prix nobel de chimie a sa place de parc à vèlo rèsèrvèe devant le bâtiment. Les endroits qui contiennent des laboratoires sont gènèralement dèdaleux et bien dèg esthètiquement. Pour ça il va falloir trouver ton chemin dans ce dèdale. Il y a 2 QUESTIES et un BOSS à trouver ici."
+text = "Ici c'est le Biophore. C'est un des endroits où on fait le plus de laboratoire (la Science avec un grand S s'il vous plait). D'ailleurs le prix nobel de chimie a sa place de parc à vèlo rèsèrvèe devant le bâtiment. Les endroits qui contiennent des laboratoires sont gènèralement dèdaleux et bien dèg esthètiquement. Pour ça il va falloir trouver ton chemin dans ce dèdale. Il y a 2 QUESTIES et un BOSS à trouver ici."
+script = ExtResource( 16 )
 
 [node name="Button" type="Button" parent="CanvasLayer/Control/PopupDialog"]
 anchor_left = 1.0
@@ -152,7 +160,7 @@ margin_bottom = 1.0
 text = "Intèressant..."
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 15 )
+stream = ExtResource( 17 )
 volume_db = -20.0
 autoplay = true
 [connection signal="body_entered" from="doortrigger14" to="doortrigger14" method="_on_doortrigger14_body_entered"]

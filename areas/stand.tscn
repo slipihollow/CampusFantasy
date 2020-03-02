@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://areas/stand.gd" type="Script" id=1]
 [ext_resource path="res://engine/Camera.tscn" type="PackedScene" id=2]
@@ -7,14 +7,16 @@
 [ext_resource path="res://tiles/insidefloor2.tres" type="TileSet" id=5]
 [ext_resource path="res://tiles/indoor.tres" type="TileSet" id=6]
 [ext_resource path="res://tiles/house3.tres" type="TileSet" id=7]
-[ext_resource path="res://pickups/box.tscn" type="PackedScene" id=8]
-[ext_resource path="res://player/player.tscn" type="PackedScene" id=9]
-[ext_resource path="res://areas/doortrigger12.gd" type="Script" id=10]
-[ext_resource path="res://Godot_menu/Theme/Theme_test.tres" type="Theme" id=11]
-[ext_resource path="res://ui/inté.gd" type="Script" id=12]
-[ext_resource path="res://theme/Campus_Theme.tres" type="Theme" id=13]
-[ext_resource path="res://ui/inté_gen.gd" type="Script" id=14]
-[ext_resource path="res://sounds/Pride_v002.wav" type="AudioStream" id=15]
+[ext_resource path="res://pickups/graine.tscn" type="PackedScene" id=8]
+[ext_resource path="res://ui/hud.tscn" type="PackedScene" id=9]
+[ext_resource path="res://pickups/box.tscn" type="PackedScene" id=10]
+[ext_resource path="res://player/player.tscn" type="PackedScene" id=11]
+[ext_resource path="res://areas/doortrigger12.gd" type="Script" id=12]
+[ext_resource path="res://Godot_menu/Theme/Theme_test.tres" type="Theme" id=13]
+[ext_resource path="res://ui/inté.gd" type="Script" id=14]
+[ext_resource path="res://theme/Campus_Theme.tres" type="Theme" id=15]
+[ext_resource path="res://ui/inté_gen.gd" type="Script" id=16]
+[ext_resource path="res://sounds/Pride_v002.wav" type="AudioStream" id=17]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16.1364, 10 )
@@ -26,7 +28,7 @@ script = ExtResource( 1 )
 
 [node name="ennemies" parent="." instance=ExtResource( 3 )]
 cell_size = Vector2( 14, 14 )
-tile_data = PoolIntArray( 852054, 536870915, 0, 917585, 536870916, 0, 983116, 536870916, 0, 1048603, 536870921, 0, 1245263, 536870915, 0, 1310807, 536870921, 0, 2097192, 536870921, 0, 2293791, 536870921, 0, 2490403, 536870921, 0, 2752545, 536870921, 0, 2883624, 536870921, 0 )
+tile_data = PoolIntArray( 720911, 7, 0, 851972, 536870920, 0, 852054, 536870915, 0, 917585, 536870916, 0, 983116, 536870916, 0, 1245263, 536870915, 0, 1310807, 536870921, 0, 2031635, 8, 0, 2555905, 10, 0, 2621480, 536870926, 0, 2883624, 536870921, 0 )
 
 [node name="npcs" parent="." instance=ExtResource( 4 )]
 cell_size = Vector2( 18, 18 )
@@ -67,15 +69,20 @@ cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( 131073, 162, 0, 131074, 113, 0, 131076, 162, 0, 131077, 113, 0, 131079, 162, 0, 131080, 113, 0, 131082, 162, 0, 131083, 113, 0, 131085, 162, 0, 131086, 113, 0, 131088, 162, 0, 131089, 113, 0, 131091, 162, 0, 131092, 113, 0, 131094, 162, 0, 131095, 113, 0, 131097, 162, 0, 131098, 113, 0, 131100, 162, 0, 131101, 113, 0, 131103, 162, 0, 131104, 113, 0, 131106, 162, 0, 131107, 113, 0, 131109, 162, 0, 131110, 113, 0, 196609, 120, 0, 196610, 115, 0, 196612, 120, 0, 196613, 115, 0, 196615, 120, 0, 196616, 115, 0, 196618, 120, 0, 196619, 115, 0, 196621, 120, 0, 196622, 115, 0, 196624, 120, 0, 196625, 115, 0, 196627, 120, 0, 196628, 115, 0, 196630, 120, 0, 196631, 115, 0, 196633, 120, 0, 196634, 115, 0, 196636, 120, 0, 196637, 115, 0, 196639, 120, 0, 196640, 115, 0, 196642, 120, 0, 196643, 115, 0, 196645, 120, 0, 196646, 115, 0 )
 
-[node name="box" parent="." instance=ExtResource( 8 )]
-position = Vector2( 1214.84, 124.824 )
+[node name="graine" parent="." instance=ExtResource( 8 )]
+position = Vector2( 56.7862, 270.57 )
 
-[node name="player" parent="." instance=ExtResource( 9 )]
-SPEED = 100.0
+[node name="hud" parent="." instance=ExtResource( 9 )]
+
+[node name="box" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1214.84, 124.824 )
+scale = Vector2( 5, 5 )
+
+[node name="player" parent="." instance=ExtResource( 11 )]
 
 [node name="doortrigger12" type="Area2D" parent="."]
 position = Vector2( 241.997, 638.202 )
-script = ExtResource( 10 )
+script = ExtResource( 12 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="doortrigger12"]
 position = Vector2( -0.902466, 42.4174 )
@@ -92,7 +99,7 @@ margin_left = -2.85516
 margin_top = -117.636
 margin_right = -2.85516
 margin_bottom = -39.636
-theme = ExtResource( 11 )
+theme = ExtResource( 13 )
 
 [node name="Timer" type="Timer" parent="CanvasLayer/Control"]
 wait_time = 0.05
@@ -104,7 +111,7 @@ margin_left = 5.0
 margin_top = -348.548
 margin_right = 643.0
 margin_bottom = -247.548
-script = ExtResource( 12 )
+script = ExtResource( 14 )
 
 [node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Control/PopupDialog"]
 anchor_top = 1.0
@@ -120,11 +127,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -13.0
 margin_right = -11.0
-theme = ExtResource( 13 )
+theme = ExtResource( 15 )
 bbcode_enabled = true
-bbcode_text = "Ici c'est l'Amphipôle (mais tout le monde dit que c'est Amphimax vu que les bâtiments sont collès). Lors de la journèe des premiéres, tous les stands des diffèrentes associations du campus sont dans ce couloir. Tu as un questie à trouver ici."
-text = "Ici c'est l'Amphipôle (mais tout le monde dit que c'est Amphimax vu que les bâtiments sont collès). Lors de la journèe des premiéres, tous les stands des diffèrentes associations du campus sont dans ce couloir. Tu as un questie à trouver ici."
-script = ExtResource( 14 )
+bbcode_text = "Ici c'est l'Amphipôle (mais tout le monde dit que c'est Amphimax vu que les bâtiments sont collès). Lors de la journèe des premiéres, tous les stands des diffèrentes associations du campus sont dans ce couloir. Tu as 2 QUESTIES à trouver ici."
+text = "Ici c'est l'Amphipôle (mais tout le monde dit que c'est Amphimax vu que les bâtiments sont collès). Lors de la journèe des premiéres, tous les stands des diffèrentes associations du campus sont dans ce couloir. Tu as 2 QUESTIES à trouver ici."
+script = ExtResource( 16 )
 
 [node name="Button" type="Button" parent="CanvasLayer/Control/PopupDialog"]
 anchor_left = 1.0
@@ -138,7 +145,7 @@ margin_bottom = 1.0
 text = "Intèressant..."
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 15 )
+stream = ExtResource( 17 )
 volume_db = -10.0
 autoplay = true
 [connection signal="body_entered" from="doortrigger12" to="doortrigger12" method="_on_doortrigger12_body_entered"]

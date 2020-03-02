@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://areas/banane.gd" type="Script" id=1]
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=2]
@@ -8,13 +8,14 @@
 [ext_resource path="res://player/npc_tilemap.tscn" type="PackedScene" id=6]
 [ext_resource path="res://tiles/indoor.tres" type="TileSet" id=7]
 [ext_resource path="res://tiles/chaise.tres" type="TileSet" id=8]
-[ext_resource path="res://areas/doortrigger8.gd" type="Script" id=9]
-[ext_resource path="res://Godot_menu/Theme/Theme_test.tres" type="Theme" id=10]
-[ext_resource path="res://ui/inté.gd" type="Script" id=11]
-[ext_resource path="res://theme/Campus_Theme.tres" type="Theme" id=12]
-[ext_resource path="res://ui/inté_gen.gd" type="Script" id=13]
-[ext_resource path="res://sounds/Restaurant Ambiance -SoundBible.com-628640170.wav" type="AudioStream" id=14]
-[ext_resource path="res://sounds/8-Bit-Puzzler.wav" type="AudioStream" id=15]
+[ext_resource path="res://ui/hud.tscn" type="PackedScene" id=9]
+[ext_resource path="res://areas/doortrigger8.gd" type="Script" id=10]
+[ext_resource path="res://Godot_menu/Theme/Theme_test.tres" type="Theme" id=11]
+[ext_resource path="res://ui/inté.gd" type="Script" id=12]
+[ext_resource path="res://theme/Campus_Theme.tres" type="Theme" id=13]
+[ext_resource path="res://ui/inté_gen.gd" type="Script" id=14]
+[ext_resource path="res://sounds/Restaurant Ambiance -SoundBible.com-628640170.wav" type="AudioStream" id=15]
+[ext_resource path="res://sounds/8-Bit-Puzzler.wav" type="AudioStream" id=16]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20, 10 )
@@ -29,6 +30,7 @@ visible = false
 
 [node name="lentille" parent="." instance=ExtResource( 4 )]
 position = Vector2( 77.0083, 336.842 )
+scale = Vector2( 5, 5 )
 
 [node name="ennemies" parent="." instance=ExtResource( 5 )]
 cell_size = Vector2( 32, 32 )
@@ -81,11 +83,13 @@ cell_size = Vector2( 8, 8 )
 format = 1
 tile_data = PoolIntArray( 524296, 43, 0, 720920, 72, 0, 720932, 72, 0, 786440, 46, 0, 786481, 73, 0, 786492, 72, 0, 851992, 71, 0, 852004, 71, 0, 852016, 72, 0, 917528, 72, 0, 917540, 72, 0, 917564, 71, 0, 983088, 71, 0, 983100, 72, 0, 1048600, 71, 0, 1048612, 71, 0, 1114148, 72, 0, 1114160, 72, 0, 1114172, 71, 0, 1179672, 72, 0, 1179709, 73, 0, 1245220, 71, 0, 1245232, 71, 0, 1245244, 72, 0, 1310744, 71, 0, 1376280, 72, 0, 1376292, 72, 0, 1376305, 73, 0, 1376316, 71, 0, 1441840, 72, 0, 1507352, 71, 0, 1507364, 71, 0, 1507388, 72, 0, 1572900, 72, 0, 1572912, 71, 0, 1638424, 72, 0, 1638448, 72, 0, 1638460, 71, 0, 1703972, 71, 0, 1769496, 71, 0, 1769520, 71, 0, 1769533, 73, 0, 1835032, 72, 0, 1835044, 72, 0, 1835056, 72, 0, 1835068, 72, 0, 1966104, 71, 0, 1966116, 71, 0, 1966128, 71, 0, 1966140, 71, 0, 2031640, 72, 0, 2031652, 72, 0, 2031664, 72, 0, 2031676, 72, 0, 2162712, 71, 0, 2162724, 71, 0, 2162736, 71, 0, 2162748, 71, 0 )
 
+[node name="hud" parent="." instance=ExtResource( 9 )]
+
 [node name="doortrigger8" type="Area2D" parent="."]
 editor/display_folded = true
 visible = false
 position = Vector2( 940, 330 )
-script = ExtResource( 9 )
+script = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="doortrigger8"]
 position = Vector2( 4.95801, 40 )
@@ -104,7 +108,7 @@ margin_top = -226.636
 margin_right = 189.145
 margin_bottom = -148.636
 rect_rotation = 45.0
-theme = ExtResource( 10 )
+theme = ExtResource( 11 )
 
 [node name="Timer" type="Timer" parent="CanvasLayer/Control"]
 wait_time = 0.05
@@ -116,7 +120,7 @@ margin_left = 4.68323
 margin_top = -324.806
 margin_right = 642.683
 margin_bottom = -250.806
-script = ExtResource( 11 )
+script = ExtResource( 12 )
 
 [node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Control/PopupDialog"]
 anchor_top = 1.0
@@ -131,11 +135,11 @@ margin_bottom = -20.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -11.0
-theme = ExtResource( 12 )
+theme = ExtResource( 13 )
 bbcode_enabled = true
 bbcode_text = "Ici c'est la Banane, la bibliothèque et la grande cafètèria de l'Unil. Tu y trouveras aussi un vrai restaurant, des livres, beaucoup de livres... Tu as un QUESTIE à trouver ici. "
 text = "Ici c'est la Banane, la bibliothèque et la grande cafètèria de l'Unil. Tu y trouveras aussi un vrai restaurant, des livres, beaucoup de livres... Tu as un QUESTIE à trouver ici. "
-script = ExtResource( 13 )
+script = ExtResource( 14 )
 
 [node name="Button" type="Button" parent="CanvasLayer/Control/PopupDialog"]
 anchor_left = 1.0
@@ -150,13 +154,13 @@ text = "Intèressant..."
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 362.636, 195.266 )
-stream = ExtResource( 14 )
+stream = ExtResource( 15 )
 volume_db = -5.0
 autoplay = true
 max_distance = 550.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 15 )
+stream = ExtResource( 16 )
 volume_db = -10.0
 autoplay = true
 [connection signal="body_entered" from="doortrigger8" to="doortrigger8" method="_on_doortrigger8_body_entered"]
